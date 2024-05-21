@@ -1,4 +1,4 @@
-alert tcp any any -> any 443 (msg:"ticketlink.co.kr access"; flow:to_server,established; tls_sni; content:"ticketlink.co.k"; sid:10001; rev:1;)
+alert tcp any any -> any 443 (msg:"ticketlink.co.kr access"; flow:to_server,established; tls_sni; content:"ticketlink.co.kr"; sid:10001; rev:1;)
 alert tcp any any -> any 443 (msg:"ticket.melon.com access"; flow:to_server,established; tls_sni; content:"ticket.melon.com"; sid:10002; rev:1;)
 alert tcp any any -> any 443 (msg:"tickets.interpark.com access"; flow:to_server,established; tls_sni; content:"tickets.interpark.com"; sid:10003; rev:1;)
 alert tcp any any -> any 80 (msg:"ticket.yes24.com access"; content:"GET /"; content:"Host: "; content:"ticket.yes24.com"; sid:10004; rev:1;)
